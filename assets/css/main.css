@@ -7,8 +7,51 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-.hidden {
-  display: none;
+@media screen and (max-width: 767px) {
+  .entrance {
+    width: 50px;
+    height: 8px;
+    background-color: #ffff59;
+    border-radius: 2px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .slots-box {
+    display: flex;
+  }
+
+  #slots-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #slots-container_01,
+  #slots-container_02,
+  #slots-container_03,
+  #slots-container_04,
+  #slots-container_05,
+  #slots-container_06 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slot {
+    width: 15px;
+    height: 5px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 1px;
+    margin-bottom: 1px;
+  }
+
+  #counters-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
 }
 
 .entrance {
