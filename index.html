@@ -22,8 +22,8 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-        <div class="logo">
-          <img src="" />
+        <div>
+          <img class="logo" src="images/cbnulogo.PNG" />
         </div>
         <div class="content">
           <div class="inner">
@@ -33,10 +33,14 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#intro">Section 1</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#intro">Section 1</a>
+            </li>
+            <li>
+              <a href="#work">Section 1</a>
+            </li>
+            <li><a href="#about">Section 1</a></li>
+            <li><a href="#contact">Section 1</a></li>
             <!--<li><a href="#elements">Elements</a></li>-->
           </ul>
         </nav>
@@ -47,37 +51,40 @@
         <!-- Intro -->
         <article id="intro">
           <h2 class="major">Section 1 주차 현황</h2>
-          <div id="slots-container"></div>
+          <div class="entrance">
+            <spna>입구</spna>
+          </div>
+          <div id="slots-container">
+            <div id="slots-container_01"></div>
+            <div class="slots-box">
+              <div id="slots-container_02"></div>
+              <div id="slots-container_03"></div>
+            </div>
+            <div class="slots-box">
+              <div id="slots-container_04"></div>
+              <div id="slots-container_05"></div>
+            </div>
+            <div id="slots-container_06"></div>
+          </div>
           <div id="counters-container">
-            <p>True count: <span id="true-counter"></span></p>
-            <p>False count: <span id="false-counter"></span></p>
+            <p>빈 자리: <span id="false-counter"></span></p>
+          </div>
+          <div id="special-counters-container">
+            <p>
+              장애인 전용 주차구역 빈 자리:
+              <span id="special-false-counter"></span>
+            </p>
           </div>
         </article>
 
         <!-- Work -->
         <article id="work">
-          <h2 class="major">Work</h2>
-          <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-          <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
-          </p>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
+          <h2 class="major">Section 1 실시간 CCTV 영상</h2>
         </article>
 
         <!-- About -->
         <article id="about">
-          <h2 class="major">About</h2>
+          <h2 class="major">Section 1</h2>
           <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
@@ -92,7 +99,7 @@
 
         <!-- Contact -->
         <article id="contact">
-          <h2 class="major">Contact</h2>
+          <h2 class="major">Section 1</h2>
           <form method="post" action="#">
             <div class="fields">
               <div class="field half">

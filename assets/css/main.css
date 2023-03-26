@@ -7,11 +7,53 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.hidden {
+  display: none;
+}
+
+.entrance {
+  width: 250px;
+  height: 30px;
+  background-color: #ffff59;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.slots-box {
+  display: flex;
+}
+
+#slots-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#slots-container_01,
+#slots-container_02,
+#slots-container_03,
+#slots-container_04,
+#slots-container_05,
+#slots-container_06 {
+  display: flex;
+  flex-direction: column;
+}
+
 .slot {
-  width: 50px;
+  width: 100px;
   height: 50px;
-  border: 1px solid black;
-  display: inline-block;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+#counters-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 html,
@@ -1574,14 +1616,10 @@ body.is-preload #header .content .inner {
     height: calc(2rem + 1px);
   }
 
-  #header .logo {
-    width: 4.75rem;
-    height: 4.75rem;
-    line-height: 4.75rem;
-  }
-
-  #header .logo .icon:before {
-    font-size: 1.75rem;
+  .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5;
   }
 
   #header .content .inner {
