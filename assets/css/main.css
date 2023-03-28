@@ -296,11 +296,11 @@ html {
   }
 
   .slot {
-    width: 4.25em;
+    width: 4.75em;
     height: 3.13em;
     border: 0.06em solid whitesmoke;
     border-radius: 0.625em;
-    margin-bottom: 0.313em;
+    margin-bottom: 0.213em;
   }
 
   #counters-container {
@@ -315,7 +315,7 @@ html {
     font-size: 11pt;
   }
   .entrance {
-    width: 8em;
+    width: 7em;
     height: 1em;
     background-color: #ffff59;
     border-radius: 0.35em;
@@ -363,6 +363,50 @@ html {
 @media screen and (max-width: 360px) {
   html {
     font-size: 10pt;
+  }
+  .entrance {
+    width: 8em;
+    height: 1em;
+    background-color: #ffff59;
+    border-radius: 0.35em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.35em;
+  }
+
+  .slots-box {
+    display: flex;
+  }
+
+  #slots-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #slots-container_01,
+  #slots-container_02,
+  #slots-container_03,
+  #slots-container_04,
+  #slots-container_05,
+  #slots-container_06 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slot {
+    width: 3.25em;
+    height: 1.53em;
+    border: 0.03em solid whitesmoke;
+    border-radius: 0.325em;
+    margin-bottom: 0.153em;
+  }
+
+  #counters-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0.325em;
   }
 }
 
