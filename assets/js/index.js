@@ -96,7 +96,9 @@ slotsRef.on("value", function (snapshot) {
       const slotId = childSnapshot.key;
       const slotValue = childSnapshot.val();
       const slotElement = document.createElement("div");
+      const slotImgElement = document.createElement("i");
       slotElement.className = "slot";
+      slotImgElement.className = "fa-solid fa-wheelchair";
       slotElement.id = slotId;
       if (slotValue) {
         slotElement.style.backgroundColor = "#E02828";
@@ -106,11 +108,14 @@ slotsRef.on("value", function (snapshot) {
         specialFalseCount++; // Slot is vacant
       }
       slotsContainer01.appendChild(slotElement);
+      slotElement.appendChild(slotImgElement);
     } else if (childSnapshot.key === "slot_04") {
       const slotId = childSnapshot.key;
       const slotValue = childSnapshot.val();
       const slotElement = document.createElement("div");
+      const slotImgElement = document.createElement("i");
       slotElement.className = "slot";
+      slotImgElement.className = "fa-solid fa-wheelchair";
       slotElement.id = slotId;
       if (slotValue) {
         slotElement.style.backgroundColor = "#E02828";
@@ -120,6 +125,7 @@ slotsRef.on("value", function (snapshot) {
         specialFalseCount++; // Slot is vacant
       }
       slotsContainer01.appendChild(slotElement);
+      slotElement.appendChild(slotImgElement);
     } else if (childSnapshot.key === "slot_05") {
       const slotId = childSnapshot.key;
       const slotValue = childSnapshot.val();

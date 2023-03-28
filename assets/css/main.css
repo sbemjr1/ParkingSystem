@@ -212,6 +212,7 @@ body.is-preload *:after {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .slots-box {
@@ -239,6 +240,13 @@ body.is-preload *:after {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   margin-bottom: 5px;
+}
+
+#slot_03,
+#slot_04 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #counters-container {
