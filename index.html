@@ -34,13 +34,13 @@
         <nav>
           <ul>
             <li>
-              <a href="#intro">Section 1</a>
+              <a href="#intro">주차 현황</a>
             </li>
             <li>
-              <a href="#work">Section 1</a>
+              <a href="#work">실시간 CCTV</a>
             </li>
-            <li><a href="#about">Section 1</a></li>
-            <li><a href="#contact">Section 1</a></li>
+            <li><a href="#about">주차장 위치</a></li>
+            <li><a href="#contact">개발진 소개</a></li>
             <!--<li><a href="#elements">Elements</a></li>-->
           </ul>
         </nav>
@@ -50,7 +50,7 @@
       <div id="main">
         <!-- Intro -->
         <article id="intro">
-          <h2 class="major">Section 1 주차 현황</h2>
+          <h2 class="major">주차 현황</h2>
           <div class="entrance">
             <spna>입구</spna>
           </div>
@@ -79,28 +79,32 @@
 
         <!-- Work -->
         <article id="work">
-          <h2 class="major">Section 1 실시간 CCTV 영상</h2>
-          <img src="http://172.30.18.40:8000/video_feed/" />
+          <h2 class="major">실시간 CCTV 화면</h2>
+          <img src="http://172.30.18.40:8000/video_feed/" loading="lazy" />
         </article>
 
         <!-- About -->
         <article id="about">
-          <h2 class="major">Section 1</h2>
-          <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
-          </p>
+          <h2 class="major">주차장 위치</h2>
+          <div id="map" style="width: 500px; height: 400px"></div>
+          <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3a91ae6084e76537f2730ca7d34e76c"
+          ></script>
+          <script>
+            var container = document.getElementById("map");
+            var options = {
+              center: new kakao.maps.LatLng(33.450701, 126.570667),
+              level: 3,
+            };
+
+            var map = new kakao.maps.Map(container, options);
+          </script>
         </article>
 
         <!-- Contact -->
         <article id="contact">
-          <h2 class="major">Section 1</h2>
+          <h2 class="major">개발진 소개</h2>
           <form method="post" action="#">
             <div class="fields">
               <div class="field half">
