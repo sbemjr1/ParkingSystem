@@ -80,7 +80,54 @@
         <!-- Work -->
         <article id="work">
           <h2 class="major">실시간 CCTV 화면</h2>
-          <img src="http://172.30.18.40:8000/video_feed/" loading="lazy" />
+          <img id="image" alt="streaming image" loading="lazy" />
+          <div id="error"></div>
+
+          <!-- Firebase SDK -->
+          <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+          <script>
+            // Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyC2X64sTtnuCGA5zwYwjplQdPIzPVkkRowY",
+              authDomain: "yolov7-pklot.firebaseapp.com",
+              databaseURL: "https://yolov7-pklot-default-rtdb.firebaseio.com",
+              projectId: "yolov7-pklot",
+              storageBucket: "yolov7-pklot.appspot.com",
+              messagingSenderId: "568242926157",
+              appId: "1:568242926157:web:885b0a2100ac1877a72204",
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            // Get reference to the Firebase database
+            const dbRef = firebase.database().ref();
+
+            // Listen for changes in the "stream" key
+            dbRef.child("stream").on(
+              "value",
+              function (snapshot) {
+                const base64Data = snapshot.val();
+
+                // Convert base64 data to an image
+                const img = new Image();
+                img.onload = function () {
+                  document.getElementById("image").src = img.src;
+                };
+                img.onerror = function () {
+                  document.getElementById("error").textContent =
+                    "Failed to load image. Please check your network connection and try again.";
+                };
+                img.src = "data:image/jpeg;base64," + base64Data;
+              },
+              function (errorObject) {
+                document.getElementById("error").textContent =
+                  "The read failed: " + errorObject.code;
+              }
+            );
+          </script>
         </article>
 
         <!-- About -->
