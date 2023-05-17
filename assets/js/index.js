@@ -31,13 +31,18 @@ function postMessage() {
   }
 }
 
-// 실시간 데이터베이스 변경 감지 및 리스트 업데이트
 var messageList = document.getElementById("messageList");
-database.ref("messages").on("child_added", function (snapshot) {
-  var message = snapshot.val();
-  var listItem = document.createElement("li");
-  listItem.innerText = message;
-  messageList.appendChild(listItem);
+
+// "messages" 경로의 데이터를 가져와서 리스트로 출력
+database.ref("messages").once("value", function (snapshot) {
+  snapshot.forEach(function (childSnapshot) {
+    var message = childSnapshot.val();
+
+    // 리스트 아이템 생성 및 메시지 추가
+    var listItem = document.createElement("li");
+    listItem.innerText = message;
+    messageList.appendChild(listItem);
+  });
 });
 
 const slotsRef = database.ref();
