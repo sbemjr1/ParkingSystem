@@ -19,6 +19,18 @@ const falseCounter = document.getElementById("false-counter");
 const specialTrueCounter = document.getElementById("special-true-counter");
 const specialFalseCounter = document.getElementById("special-false-counter");
 
+// 게시 함수
+function postMessage() {
+  var messageInput = document.getElementById("messageInput");
+  var message = messageInput.value.trim();
+
+  if (message !== "") {
+    var newMessageRef = database.ref("messages").push();
+    newMessageRef.set(message);
+    messageInput.value = "";
+  }
+}
+
 const slotsRef = database.ref();
 slotsRef.on("value", function (snapshot) {
   // Clear previous slot elements
