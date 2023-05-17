@@ -31,6 +31,15 @@ function postMessage() {
   }
 }
 
+// 실시간 데이터베이스 변경 감지 및 리스트 업데이트
+var messageList = document.getElementById("messageList");
+database.ref("messages").on("child_added", function (snapshot) {
+  var message = snapshot.val();
+  var listItem = document.createElement("li");
+  listItem.innerText = message;
+  messageList.appendChild(listItem);
+});
+
 const slotsRef = database.ref();
 slotsRef.on("value", function (snapshot) {
   // Clear previous slot elements
