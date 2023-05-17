@@ -14,8 +14,6 @@ const slotsContainer01 = document.getElementById("slots-container_01");
 const slotsContainer02 = document.getElementById("slots-container_02");
 const slotsContainer03 = document.getElementById("slots-container_03");
 const slotsContainer04 = document.getElementById("slots-container_04");
-const slotsContainer05 = document.getElementById("slots-container_05");
-const slotsContainer06 = document.getElementById("slots-container_06");
 const trueCounter = document.getElementById("true-counter");
 const falseCounter = document.getElementById("false-counter");
 const specialTrueCounter = document.getElementById("special-true-counter");
@@ -35,12 +33,6 @@ slotsRef.on("value", function (snapshot) {
   }
   while (slotsContainer04.firstChild) {
     slotsContainer04.removeChild(slotsContainer04.firstChild);
-  }
-  while (slotsContainer05.firstChild) {
-    slotsContainer05.removeChild(slotsContainer05.firstChild);
-  }
-  while (slotsContainer06.firstChild) {
-    slotsContainer06.removeChild(slotsContainer06.firstChild);
   }
 
   let trueCount = 0;
@@ -336,146 +328,6 @@ slotsRef.on("value", function (snapshot) {
         falseCount++; // Slot is vacant
       }
       slotsContainer04.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_20") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer05.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_21") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer05.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_22") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer05.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_23") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer05.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_24") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer05.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_25") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer06.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_26") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer06.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_27") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer06.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_28") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer06.appendChild(slotElement);
-    } else if (childSnapshot.key === "slot_29") {
-      const slotId = childSnapshot.key;
-      const slotValue = childSnapshot.val();
-      const slotElement = document.createElement("div");
-      slotElement.className = "slot";
-      slotElement.id = slotId;
-      if (slotValue) {
-        slotElement.style.backgroundColor = "#E02828";
-        trueCount++; // Slot is occupied
-      } else {
-        slotElement.style.backgroundColor = "#008200";
-        falseCount++; // Slot is vacant
-      }
-      slotsContainer06.appendChild(slotElement);
     }
   });
   falseCounter.textContent = falseCount;
