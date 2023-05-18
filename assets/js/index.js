@@ -31,8 +31,8 @@ function postMessage() {
   }
 }
 
+/*
 var messageList = document.getElementById("messageList");
-
 // "messages" 경로의 데이터를 가져와서 리스트로 출력
 database.ref("messages").once("value", function (snapshot) {
   snapshot.forEach(function (childSnapshot) {
@@ -43,7 +43,7 @@ database.ref("messages").once("value", function (snapshot) {
     listItem.innerText = message;
     messageList.appendChild(listItem);
   });
-});
+});*/
 
 const slotsRef = database.ref();
 slotsRef.on("value", function (snapshot) {
