@@ -31,7 +31,6 @@ function postMessage() {
   }
 }
 
-/*
 var messageList = document.getElementById("messageList");
 // "messages" 경로의 데이터를 가져와서 리스트로 출력
 database.ref("messages").once("value", function (snapshot) {
@@ -43,11 +42,11 @@ database.ref("messages").once("value", function (snapshot) {
     listItem.innerText = message;
     messageList.appendChild(listItem);
   });
-});*/
+});
 
 const slotsRef = database.ref();
 slotsRef.on("value", function (snapshot) {
-  // Clear previous slot elements
+  // 이전 슬롯 요소 지우기
   while (slotsContainer01.firstChild) {
     slotsContainer01.removeChild(slotsContainer01.firstChild);
   }
